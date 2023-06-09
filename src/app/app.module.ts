@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +19,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { RegistrationList2Component } from './registration-list2/registration-list2.component';
+import { LoginComponent } from './login/login.component';
+import { FormComponent } from './form/form.component';
+import { PaymentUploadComponent } from './payment-upload/payment-upload.component';
+
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 
@@ -24,11 +31,15 @@ import { RegistrationList2Component } from './registration-list2/registration-li
   declarations: [
     AppComponent,
     RegistrationList1Component,
-    RegistrationList2Component
+    RegistrationList2Component,
+    LoginComponent,
+    FormComponent,
+    PaymentUploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -38,7 +49,8 @@ import { RegistrationList2Component } from './registration-list2/registration-li
     MatSortModule,
     MatFormFieldModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
